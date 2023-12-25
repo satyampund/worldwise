@@ -5,6 +5,7 @@ import Pricing from './pages/Pricing';
 import PageNotFound from './pages/PageNotFound';
 import AppLayout from './pages/AppLayout';
 import Login from './pages/Login';
+import CityList from './components/CityList';
 
 const App = () => {
   return (
@@ -14,8 +15,8 @@ const App = () => {
         <Route path="product" element={<Product />} />
         <Route path="pricing" element={<Pricing />} />
         <Route path="app" element={<AppLayout />}>
-          <Route index element={<p>LIST OF CITIES</p>} />
-          <Route path="cities" element={<p>LIST OF CITIES</p>} />
+          <Route index element={<CityList />} />
+          <Route path="cities" element={<CityList />} />
           <Route path="countries" element={<p>LIST OF COURNTRIES</p>} />
           <Route path="form" element={<p>FORM</p>} />
         </Route>
