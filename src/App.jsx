@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import Product from './pages/Product';
 import HomePage from './pages/HomePage';
 import Pricing from './pages/Pricing';
@@ -7,6 +8,7 @@ import PageNotFound from './pages/PageNotFound';
 import AppLayout from './pages/AppLayout';
 import Login from './pages/Login';
 import CityList from './components/CityList';
+import CountryList from './components/CountryList';
 
 const BASE_URL = 'https://my-json-server.typicode.com/satyampund/worldwise';
 
@@ -38,7 +40,7 @@ const App = () => {
         <Route path="app" element={<AppLayout />}>
           <Route index element={<CityList cities={cities} isLoading={isLoading} />} />
           <Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />} />
-          <Route path="countries" element={<p>LIST OF COURNTRIES</p>} />
+          <Route path="countries" element={<CountryList cities={cities} isLoading={isLoading} />} />
           <Route path="form" element={<p>FORM</p>} />
         </Route>
         <Route path="login" element={<Login />} />
